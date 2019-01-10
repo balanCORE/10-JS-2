@@ -73,7 +73,7 @@ function showBox(value) {
 //loopWay
 
 function createBox(idFromHTML) {
-  var div, paragraph, header;
+  var div;
 
   var container = document.getElementById(idFromHTML)
   container.append(div);
@@ -84,12 +84,8 @@ function createBox(idFromHTML) {
     	// działanie
     	div.id = data[i].id;
     	div.className = data[i].categories.join(' ');
-    header = document.createElement('h1');
-    	header.innerHTML = data[i].title;
-    paragraph = data[i].content;
     //tworzenie
-    div.append(header);
-    div.append(paragraph);
+    div.innerHTML = '<h1>' + data[i].title + '</h1>' + data[i].content;
     container.append(div);
   }
 }

@@ -1,4 +1,4 @@
-#container div {
+#container div, #loopWay div {
 	opacity: 0.7;
 	height: 20vh;
 	width: 20vh;
@@ -15,15 +15,13 @@
 .highlighted {
 	background: green;
 }
-.clickWay, #container {
+.clickWay, #container, #loopWay {
 	width: 50vw;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
-#loopWay, #clickWay {
-	width: 50%;
-}
+
 body {
 	display: flex;
 }
