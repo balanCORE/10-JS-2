@@ -31,6 +31,8 @@ var data = [
 	},
 ];
 
+//clickWay
+
 //  HTML elements
 var box_1 = document.getElementById('box1');
 var box_2 = document.getElementById('box2');
@@ -42,48 +44,57 @@ var boxContainer = document.getElementsByClassName('container');
 
 // Listener
 box_1.addEventListener('click', function() {
-	newBox(0);
+	showBox(0);
 })
 box_2.addEventListener('click', function() {
-	newBox(1);
+	showBox(1);
 })
 box_3.addEventListener('click', function() {
-	newBox(2);
+	showBox(2);
 })
 box_4.addEventListener('click', function() {
-	newBox(3);
+	showBox(3);
 })
 box_5.addEventListener('click', function() {
-	newBox(4);
+	showBox(4);
 })
 
-//functions
-function newBox(value) {
+//clickWay
+function showBox(value) {
 	var d = document.createElement( 'div' );
         d.id = data[value].id;
-        d.innerHTML = data[value].content;
-        d.classList.add(data[value].categories)
+        d.innerHTML = '<h1>' + data[value].title + '</h1>' + data[value].content;
+        d.className = data[value].categories.join(' ');
         var p = document.getElementById('container');
         p.appendChild(d);
 }
 
 
+//loopWay
 
+function createBox(idFromHTML) {
+  var div, paragraph, header;
 
+  var container = document.getElementById(idFromHTML)
+  container.append(div);
 
+  for(var i = 0; i < data.length; i++) {
+  	// skład
+    div = document.createElement('div');
+    	// działanie
+    	div.id = data[i].id;
+    	div.className = data[i].categories.join(' ');
+    header = document.createElement('h1');
+    	header.innerHTML = data[i].title;
+    paragraph = data[i].content;
+    //tworzenie
+    div.append(header);
+    div.append(paragraph);
+    container.append(div);
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+createBox('loopWay');
 
 
 

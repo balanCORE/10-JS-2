@@ -1,7 +1,7 @@
 #container div {
 	opacity: 0.7;
-	height: 15vh;
-	width: 15vh;
+	height: 20vh;
+	width: 20vh;
 }
 
 .important {
@@ -13,5 +13,17 @@
 }
 
 .highlighted {
-
+	background: green;
+}
+.clickWay, #container {
+	width: 50vw;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+#loopWay, #clickWay {
+	width: 50%;
+}
+body {
+	display: flex;
 }

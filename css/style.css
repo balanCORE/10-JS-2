@@ -1,10 +1,29 @@
 #container div {
   opacity: 0.7;
-  height: 15vh;
-  width: 15vh; }
+  height: 20vh;
+  width: 20vh; }
 
 .important {
   opacity: 1; }
 
 .special-header {
   color: blue; }
+
+.highlighted {
+  background: green; }
+
+.clickWay, #container {
+  width: 50vw;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+#loopWay, #clickWay {
+  width: 50%; }
+
+body {
+  display: -ms-flexbox;
+  display: flex; }
