@@ -75,8 +75,7 @@ function showBox(value) {
 function createBox(idFromHTML) {
   var div;
 
-  var container = document.getElementById(idFromHTML)
-  container.append(div);
+  var container = document.getElementById(idFromHTML);
 
   for(var i = 0; i < data.length; i++) {
   	// skład
@@ -88,6 +87,7 @@ function createBox(idFromHTML) {
     div.innerHTML = '<h1>' + data[i].title + '</h1>' + data[i].content;
     container.append(div);
   }
+
 }
 
 createBox('loopWay');
